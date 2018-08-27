@@ -5,7 +5,7 @@
             <div class="card-body">
                 <h5 class="card-title"> {{task.title}} </h5>
                 <p class="card-text">Point : {{task.point}} </p>
-                <p class="card-text">Assigned To : {{task.assignTo}} </p>
+                <p class="card-text">Description : {{task.description}} </p>
                     <button type="submit" class="btn btn-success" v-if="task.position == 'todo' || task.position == 'progress' || task.position === 'completed'" @click="backto({index, task})" ><i class="fas fa-arrow-left"></i></button>
                     <button type="submit" class="btn btn-danger" @click="remove({index: index, pos : task.position})" ><i class="fas fa-times-circle"></i></button>
                     <button type="submit" class="btn btn-success" v-if="task.position == 'backlog' || task.position == 'todo' || task.position === 'progress'" @click="moveto({index, task})" ><i class="fas fa-arrow-right"></i></button>

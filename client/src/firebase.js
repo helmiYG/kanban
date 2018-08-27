@@ -1,12 +1,12 @@
 import firebase from 'firebase'
-
+require('dotenv').config()
 let config = {
-    apiKey: "AIzaSyCXNV40G9QPJ9v5yrAO2esinmJRqT9_ZE8",
-    authDomain: "kambanzfirebase.firebaseapp.com",
-    databaseURL: "https://kambanzfirebase.firebaseio.com",
-    projectId: "kambanzfirebase",
-    storageBucket: "kambanzfirebase.appspot.com",
-    messagingSenderId: "656751927248"
+  apiKey: `${process.env.apiKey}`,
+  authDomain: `${process.env.authDomain}`,
+  databaseURL: `${process.env.databaseURL}`,
+  projectId: `${process.env.projectId}`,
+  storageBucket: `${process.env.storageBucket}`,
+  messagingSenderId: `${process.env.messagingSenderId}`
   };
 
 let app = firebase.initializeApp(config);
